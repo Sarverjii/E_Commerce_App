@@ -1,97 +1,143 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# ShopNow - E-Commerce Mobile App
 
-# Getting Started
+A sleek React Native e-commerce application that allows users to browse products, add them to cart, and save items to a wishlist.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+![ShopNow App](https://via.placeholder.com/800x400.png?text=ShopNow+E-Commerce+App)
 
-## Step 1: Start Metro
+## Features
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+- Browse products from various categories
+- Search functionality
+- Product filtering by categories
+- Product details view
+- Add products to cart
+- Adjust quantity in cart
+- Persistent cart using AsyncStorage
+- Wishlist functionality
+- Clean, modern UI with gradient backgrounds
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+## Tech Stack
 
-```sh
-# Using npm
-npm start
+- React Native
+- React Navigation (Bottom Tabs & Stack Navigation)
+- AsyncStorage for data persistence
+- Linear Gradient for UI styling
+- Vector Icons for iconography
+- FakeStore API for product data
 
-# OR using Yarn
-yarn start
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/shopnow-app.git
+cd shopnow-app
 ```
 
-## Step 2: Build and run your app
+2. Install dependencies:
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
+```bash
+npm install
+# or
+yarn install
 ```
 
-### iOS
+3. Required dependencies:
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
+```bash
+npm install @react-navigation/native @react-navigation/bottom-tabs @react-navigation/stack
+npm install react-native-vector-icons react-native-linear-gradient
+npm install @react-native-async-storage/async-storage
+npm install react-native-gesture-handler react-native-reanimated react-native-screens
 ```
 
-Then, and every time you update your native dependencies, run:
+4. Start the Metro bundler:
 
-```sh
-bundle exec pod install
+```bash
+npx react-native start
 ```
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+5. Run the application:
 
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
+```bash
+npx react-native run-android
+# or
+npx react-native run-ios
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+## Project Structure
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+```
+shopnow-app/
+├── src/
+│   ├── assets/           # Images and other static assets
+│   ├── components/       # Reusable components
+│   │   ├── Header.js
+│   │   ├── Category.js
+│   │   └── ProductCard.js
+│   └── screen/           # Application screens
+│       ├── HomeScreen.js
+│       ├── ProductDetailsScreen.js
+│       ├── CartScreen.js
+│       └── WishlistScreen.js
+├── App.js                # Main application entry point
+├── index.js              # React Native entry point
+└── package.json          # Project dependencies
+```
 
-## Step 3: Modify your app
+## Application Flow
 
-Now that you have successfully run the app, let's make changes!
+1. **Home Screen**: Displays products in a grid format with filtering options
+2. **Product Details**: Shows detailed information about a selected product
+3. **Cart**: Displays added products with quantity controls and total calculation
+4. **Wishlist**: Shows all products saved to wishlist
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+## Data Management
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+- Product data is fetched from the [FakeStore API](https://fakestoreapi.com/)
+- Cart and wishlist data are stored in AsyncStorage for persistence
+- State management is handled using React's useState and useEffect hooks
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+## How to Use
 
-## Congratulations! :tada:
+### Browsing Products
 
-You've successfully run and modified your React Native App. :partying_face:
+- Scroll through the home screen to view all products
+- Use the category filter to view products by category
+- Use the search bar to find specific products
 
-### Now what?
+### Product Details
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+- Tap on any product to view detailed information
+- Adjust quantity and add to cart from the details screen
+- Add/remove from wishlist using the heart icon
 
-# Troubleshooting
+### Managing Cart
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+- View all cart items in the Cart tab
+- Adjust quantities or remove items as needed
+- View subtotal, shipping cost, and total amount
+- Clear the entire cart with "Clear All" button
 
-# Learn More
+### Using Wishlist
 
-To learn more about React Native, take a look at the following resources:
+- Save products to wishlist by clicking the heart icon
+- Access all saved items from the Wishlist tab
+- Remove items from wishlist by toggling the heart icon again
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+## Troubleshooting
+
+If you encounter any issues:
+
+1. Make sure all dependencies are correctly installed
+2. Check that the Fake Store API is accessible
+3. Ensure AsyncStorage permissions are properly set
+4. For navigation issues, verify that all navigators are properly configured
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
