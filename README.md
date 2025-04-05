@@ -2,7 +2,12 @@
 
 A sleek React Native e-commerce application that allows users to browse products, add them to cart, and save items to a wishlist.
 
-![ShopNow App](https://via.placeholder.com/800x400.png?text=ShopNow+E-Commerce+App)
+<div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 10px; justify-content: center;">
+  <img src="src/assets/Screenshot1.png" width="200" alt="Home Screen" />
+  <img src="src/assets/Screenshot3.png" width="200" alt="Product Details" />
+  <img src="src/assets/Screenshot4.png" width="200" alt="Shopping Cart" />
+  <img src="src/assets/Screenshot5.png" width="200" alt="Wishlist" />
+</div>
 
 ## Features
 
