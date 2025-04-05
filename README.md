@@ -4,6 +4,7 @@ A sleek React Native e-commerce application that allows users to browse products
 
 <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 10px; justify-content: center;">
   <img src="src/assets/Screenshot1.png" width="200" alt="Home Screen" />
+  <img src="src/assets/Screensho2.png" width="200" alt="Home Screen" />
   <img src="src/assets/Screenshot3.png" width="200" alt="Product Details" />
   <img src="src/assets/Screenshot4.png" width="200" alt="Shopping Cart" />
   <img src="src/assets/Screenshot5.png" width="200" alt="Wishlist" />
